@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.50%
+}
+
+body.hidden{
+    overflow: hidden;
+}
+
+:root{
+    --header-lighter: #925CEA;
+    --header-darker: #5A47CF;
+    --text: #925CEA;
+    --outline: #21127C;
+    --white: #FFFFFF;
+    --black: #000000;
+    --grey: #333333;
+}
+
+::-webkit-scrollbar{
+    width: .5rem;
+    border-radius: 0 .8rem .8rem 0;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, var(--header-lighter), var(--header-darker));
+}

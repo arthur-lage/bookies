@@ -1,0 +1,74 @@
+.book-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "Poppins";
+  
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
+
+  h2 {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+  }
+
+  p.review {
+    max-width: 80rem;
+    margin-top: 3rem;
+  }
+
+  img {
+    width: 20rem;
+    border-radius: 0.4rem;
+    border: 2px solid var(--outline);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.35);
+  }
+
+  .buttons {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+    button {
+      margin: 0 2rem;
+      width: 30rem;
+      height: 4rem;
+      transition: 0.2s ease;
+      border: 0;
+      border-radius: 0.8rem;
+      color: white;
+      font-family: "Poppins", sans-serif;
+      cursor: pointer;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+    }
+
+    .edit {
+      background: var(--white);
+      border: 2px solid var(--outline);
+      color: var(--outline);
+      font-weight: 700;
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
+
+    .delete {
+      border: 2px solid var(--outline);
+      color: var(--white);
+      background: var(--outline);
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+  }
+}

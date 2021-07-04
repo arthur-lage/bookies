@@ -1,0 +1,53 @@
+.home {
+  .searchbar {
+    margin: 3.6rem 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 3.5rem;
+
+    input {
+      border: 2px solid var(--outline);
+      outline: none;
+      border-radius: 0.8rem;
+      font-family: "Reem Kufi";
+      font-size: 2.4rem;
+      color: var(--text);
+      height: 6rem;
+      padding-left: 1.3rem;
+      width: 58.3rem;
+
+      &::placeholder {
+        color: var(--text);
+      }
+    }
+  }
+
+  .book-link{
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  .book-section {
+    padding: 2rem 5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.no-books-found{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  h1{
+    font-family: "Poppins";
+    font-weight: 700;
+    text-align: center;
+    font-size: 3rem;
+    color: var(--outline);
+  }
+}
