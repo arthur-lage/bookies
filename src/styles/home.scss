@@ -21,29 +21,49 @@
         color: var(--text);
       }
     }
+
+    @media only screen and (max-width: 768px) {
+      padding-right: 0;
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: 425px) {
+      input {
+        width: 35rem;
+        font-size: 1.9rem;
+      }
+    }
+
+    @media only screen and (max-width: 320px) {
+      input {
+        width: 27.5rem;
+        font-size: 1.75rem;
+      }
+    }
   }
 
-  .book-link{
+  .book-link {
     color: var(--black);
     text-decoration: none;
   }
 
   .book-section {
-    padding: 2rem 5rem;
+    padding: 2rem 0rem;
 
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
   }
 }
 
-.no-books-found{
+.no-books-found {
   position: absolute;
   top: 50%;
   left: 50%;
 
   transform: translate(-50%, -50%);
 
-  h1{
+  h1 {
     font-family: "Poppins";
     font-weight: 700;
     text-align: center;

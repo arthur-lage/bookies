@@ -29,10 +29,12 @@
         position: relative;
         display: flex;
         flex-direction: column;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
         align-items: center;
         justify-content: center;
         border-radius: 0 0 .8rem .8rem;
         background: var(--white);
+        border-top: 1px solid var(--outline);
         min-height: 5rem;
         
         h2{

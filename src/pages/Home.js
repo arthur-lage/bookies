@@ -10,6 +10,7 @@ import "../styles/home.scss";
 const Home = () => {
   const [books, setBooks] = useState([]);
   const [search, setSearch] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchAndUpdateBooks() {
@@ -17,6 +18,7 @@ const Home = () => {
         url: "https://bookies-backend.herokuapp.com/get",
         method: "GET",
       }).then((res) => {
+        setIsLoading(false);
         setBooks(res.data);
       });
     }
@@ -27,7 +29,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      {books.length > 0 ? (
+      {books.length > 0 && isLoading === false ? (
         <div className="home">
           <div className="searchbar">
             <input
@@ -66,7 +68,11 @@ const Home = () => {
         </div>
       ) : (
         <div className="no-books-found">
-          <h1>No books were found in the database, try to add a new book!</h1>
+          <h1>
+            {isLoading
+              ? "Loading..."
+              : "No books were found in the database, try to add a new book!"}
+          </h1>
         </div>
       )}
     </>
