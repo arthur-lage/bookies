@@ -14,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     async function fetchAndUpdateBooks() {
       await axios({
-        url: "http://localhost:5000/get",
+        url: "https://bookies-backend.herokuapp.com/get",
         method: "GET",
       }).then((res) => {
         setBooks(res.data);

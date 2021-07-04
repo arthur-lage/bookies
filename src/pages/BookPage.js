@@ -18,7 +18,7 @@ const BookPage = () => {
   useEffect(() => {
     async function fetchAndUpdatePageStates() {
       await axios({
-        url: `http://localhost:5000/get/${id}`,
+        url: `https://bookies-backend.herokuapp.com/get/${id}`,
         method: "GET",
       }).then((res) => {
         const bookInfo = res.data;
@@ -42,7 +42,7 @@ const BookPage = () => {
   function handleDelete(){
     axios({
         method: "DELETE",
-        url: `http://localhost:5000/delete/${id}`
+        url: `https://bookies-backend.herokuapp.com/delete/${id}`
     }).then(res => {
         console.log(res.data)
     })

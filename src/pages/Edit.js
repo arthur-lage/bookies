@@ -23,7 +23,7 @@ const Edit = () => {
 
     async function fetchAndUpdateStates(){
       await axios({
-        url: `http://localhost:5000/get/${id}`,
+        url: `https://bookies-backend.herokuapp.com/get/${id}`,
         method: "GET",
       }).then((res) => {
         const bookInfo = res.data
@@ -43,7 +43,7 @@ const Edit = () => {
   function updateBook() {
     axios({
       method: "PATCH",
-      url: `http://localhost:5000/edit/${id}`,
+      url: `https://bookies-backend.herokuapp.com/edit/${id}`,
       data: {
         name: name,
         author: author,

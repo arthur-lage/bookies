@@ -23,7 +23,7 @@ const Create = () => {
     async function fetchAndCreateBook() {
       await axios({
         method: "POST",
-        url: "http://localhost:5000/create",
+        url: "https://bookies-backend.herokuapp.com/create",
         data: {
           name: name,
           author: author,
