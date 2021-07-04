@@ -16,11 +16,6 @@ const Edit = () => {
   const [review, setReview] = useState("");
 
   useEffect(() => {
-    if(name.length === 0 || author.length === 0 || image.length === 0 || review.length === 0){
-      alert("Fill all the input fields, please!")      
-      return
-    }
-
     async function fetchAndUpdateStates(){
       await axios({
         url: `https://bookies-backend.herokuapp.com/get/${id}`,
@@ -41,18 +36,29 @@ const Edit = () => {
   }, [])
 
   function updateBook() {
-    axios({
-      method: "PATCH",
-      url: `https://bookies-backend.herokuapp.com/edit/${id}`,
-      data: {
-        name: name,
-        author: author,
-        image: image,
-        review: review,
-      },
-    });
+    if(name.length === 0 || author.length === 0 || image.length === 0 || review.length === 0){
+      alert("Fill all the input fields, please!")      
+      return
+    }
 
-    history.push("/");
+    async function updateBookInfo(){
+      await axios({
+        method: "PATCH",
+        url: `https://bookies-backend.herokuapp.com/edit/${id}`,
+        data: {
+          name: name,
+          author: author,
+          image: image,
+          review: review,
+        },
+      })
+    }
+
+    updateBookInfo()
+
+    setTimeout(() => {
+      history.push("/");
+    }, 2000)
   }
 
   return (

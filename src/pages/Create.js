@@ -35,7 +35,9 @@ const Create = () => {
 
     fetchAndCreateBook()
 
-    history.push("/");
+    setTimeout(() => {
+      history.push("/");
+    }, 2000)
   }
 
   return (
